@@ -47,7 +47,7 @@ namespace Examen1Parcial
 
         }
         
-        private async Task <decimal> CalculoAsync(decimal P1, decimal P2, int C1, int C2)
+       /* private async Task <decimal> CalculoAsync(decimal P1, decimal P2, int C1, int C2)
         {
 
             decimal TotalPagar = await Task.Run(()=>
@@ -58,7 +58,7 @@ namespace Examen1Parcial
             });
 
             return SubTotal;
-        }
+        } */
 
     }
 }

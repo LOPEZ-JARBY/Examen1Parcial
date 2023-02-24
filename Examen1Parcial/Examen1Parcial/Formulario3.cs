@@ -16,5 +16,17 @@ namespace Examen1Parcial
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+
+            Random Generarbutton = new Random();
+
+           
+          //  NumeroGtextBox.Text = Convert.ToString(Generarbutton);
+
+        }
+       
     }
 }

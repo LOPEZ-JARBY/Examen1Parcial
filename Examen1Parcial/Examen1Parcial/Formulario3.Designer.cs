@@ -33,7 +33,7 @@ namespace Examen1Parcial
             this.label2 = new System.Windows.Forms.Label();
             this.NumeroGtextBox = new System.Windows.Forms.TextBox();
             this.ResultadotextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Generarbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -41,9 +41,9 @@ namespace Examen1Parcial
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(52, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 13);
+            this.label1.Size = new System.Drawing.Size(97, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Numero Generado :";
+            this.label1.Text = "NumeroGenerado :";
             // 
             // label2
             // 
@@ -68,21 +68,22 @@ namespace Examen1Parcial
             this.ResultadotextBox.Size = new System.Drawing.Size(100, 20);
             this.ResultadotextBox.TabIndex = 3;
             // 
-            // button1
+            // Generarbutton
             // 
-            this.button1.Location = new System.Drawing.Point(158, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 32);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Generar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Generarbutton.Location = new System.Drawing.Point(158, 12);
+            this.Generarbutton.Name = "Generarbutton";
+            this.Generarbutton.Size = new System.Drawing.Size(88, 32);
+            this.Generarbutton.TabIndex = 4;
+            this.Generarbutton.Text = "Generar";
+            this.Generarbutton.UseVisualStyleBackColor = true;
+            this.Generarbutton.Click += new System.EventHandler(this.button1_Click);
             // 
             // Formulario3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 238);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Generarbutton);
             this.Controls.Add(this.ResultadotextBox);
             this.Controls.Add(this.NumeroGtextBox);
             this.Controls.Add(this.label2);
@@ -100,6 +101,6 @@ namespace Examen1Parcial
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox NumeroGtextBox;
         private System.Windows.Forms.TextBox ResultadotextBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Generarbutton;
     }
 }
