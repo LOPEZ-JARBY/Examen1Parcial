@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Examen1Parcial
 {
-    public partial class Form1 : Form
+    public partial class Formulario1 : Form
     {
-        public Form1()
+        public Formulario1()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Formulario1button_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
