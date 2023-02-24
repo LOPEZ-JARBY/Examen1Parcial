@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Examen1Parcial
 {
-    public partial class Formulario1 : Form
+    public partial class Formulario3 : Form
     {
-        public Formulario1()
+        public Formulario3()
         {
             InitializeComponent();
-        }
-
-        private void Calculobutton_Click(object sender, EventArgs e)
-        {
-           
         }
     }
 }

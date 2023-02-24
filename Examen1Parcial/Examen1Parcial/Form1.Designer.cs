@@ -57,6 +57,7 @@ namespace Examen1Parcial
             this.Formulario2button.TabIndex = 1;
             this.Formulario2button.Text = "Formulario2";
             this.Formulario2button.UseVisualStyleBackColor = true;
+            this.Formulario2button.Click += new System.EventHandler(this.Formulario2button_Click);
             // 
             // Formulario3button
             // 

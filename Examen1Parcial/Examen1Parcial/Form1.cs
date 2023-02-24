@@ -24,7 +24,14 @@ namespace Examen1Parcial
 
         private void Formulario1button_Click(object sender, EventArgs e)
         {
+            Form formulario = new Formulario1();
+            formulario.Show();
+        }
 
+        private void Formulario2button_Click(object sender, EventArgs e)
+        {
+            Form formulario = new Formulario2();
+            formulario.Show();
         }
     }
 }
