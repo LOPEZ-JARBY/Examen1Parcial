@@ -33,5 +33,11 @@ namespace Examen1Parcial
             Form formulario = new Formulario2();
             formulario.Show();
         }
+
+        private void Formulario3button_Click(object sender, EventArgs e)
+        {
+            Form formulario = new Formulario3();
+            formulario.Show();
+        }
     }
 }
