@@ -129,10 +129,11 @@ namespace Examen1Parcial
             // FacturalistBox
             // 
             this.FacturalistBox.FormattingEnabled = true;
-            this.FacturalistBox.Location = new System.Drawing.Point(83, 177);
+            this.FacturalistBox.Location = new System.Drawing.Point(97, 172);
             this.FacturalistBox.Name = "FacturalistBox";
-            this.FacturalistBox.Size = new System.Drawing.Size(383, 173);
+            this.FacturalistBox.Size = new System.Drawing.Size(323, 173);
             this.FacturalistBox.TabIndex = 10;
+            this.FacturalistBox.SelectedIndexChanged += new System.EventHandler(this.FacturalistBox_SelectedIndexChanged);
             // 
             // Calcularbutton
             // 
