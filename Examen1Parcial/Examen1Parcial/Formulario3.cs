@@ -16,17 +16,37 @@ namespace Examen1Parcial
         {
             InitializeComponent();
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            
+            Random NumeroGtextBox = new Random();
 
-            Random Generarbutton = new Random();
+            int Numero = NumeroGtextBox.Next(1,100);
 
-           
+            this.NumeroGtextBox.Text = Convert.ToString(Numero);
+
+
+            Mostrar( Numero);
+
           //  NumeroGtextBox.Text = Convert.ToString(Generarbutton);
 
         }
-       
+        private int Mostrar(int num)
+        {
+            if (num % 3 == 0)
+            {
+                ResultadotextBox.Text = Convert.ToString("Jarby");
+            }else if (num%5 == 0){
+
+                ResultadotextBox.Text = Convert.ToString("Lisbeth");
+            }
+            else
+            {
+               ResultadotextBox.Text = Convert.ToString("Jarby Lisbeth");
+            }
+            return num;
+        }
+
     }
 }

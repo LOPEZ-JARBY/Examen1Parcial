@@ -1,7 +1,7 @@
 ﻿
 namespace Examen1Parcial
 {
-    partial class Form1
+    partial class MenuForm
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -104,7 +104,7 @@ namespace Examen1Parcial
             this.label3.TabIndex = 5;
             this.label3.Text = "Ejercicio3";
             // 
-            // Form1
+            // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -115,8 +115,8 @@ namespace Examen1Parcial
             this.Controls.Add(this.Formulario3button);
             this.Controls.Add(this.Formulario2button);
             this.Controls.Add(this.Formulario1button);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MenuForm";
+            this.Text = "MENU";
             this.ResumeLayout(false);
             this.PerformLayout();
 
