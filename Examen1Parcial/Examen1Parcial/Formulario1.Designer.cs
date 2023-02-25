@@ -37,14 +37,14 @@ namespace Examen1Parcial
             // ValoreslistBox
             // 
             this.ValoreslistBox.FormattingEnabled = true;
-            this.ValoreslistBox.Location = new System.Drawing.Point(30, 59);
+            this.ValoreslistBox.Location = new System.Drawing.Point(30, 78);
             this.ValoreslistBox.Name = "ValoreslistBox";
-            this.ValoreslistBox.Size = new System.Drawing.Size(120, 95);
+            this.ValoreslistBox.Size = new System.Drawing.Size(278, 186);
             this.ValoreslistBox.TabIndex = 0;
             // 
             // Calculobutton
             // 
-            this.Calculobutton.Location = new System.Drawing.Point(179, 68);
+            this.Calculobutton.Location = new System.Drawing.Point(314, 78);
             this.Calculobutton.Name = "Calculobutton";
             this.Calculobutton.Size = new System.Drawing.Size(75, 23);
             this.Calculobutton.TabIndex = 1;
@@ -66,7 +66,7 @@ namespace Examen1Parcial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(326, 370);
+            this.ClientSize = new System.Drawing.Size(429, 370);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Calculobutton);
             this.Controls.Add(this.ValoreslistBox);
