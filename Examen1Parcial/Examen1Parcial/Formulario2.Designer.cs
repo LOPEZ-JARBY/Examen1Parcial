@@ -43,6 +43,7 @@ namespace Examen1Parcial
             this.Calcularbutton = new System.Windows.Forms.Button();
             this.CantidadP2label = new System.Windows.Forms.Label();
             this.Cantidad2textBox = new System.Windows.Forms.TextBox();
+            this.Cerrarbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Producto1label
@@ -128,17 +129,18 @@ namespace Examen1Parcial
             // 
             // FacturalistBox
             // 
+            this.FacturalistBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FacturalistBox.FormattingEnabled = true;
-            this.FacturalistBox.Location = new System.Drawing.Point(97, 172);
+            this.FacturalistBox.ItemHeight = 16;
+            this.FacturalistBox.Location = new System.Drawing.Point(30, 152);
             this.FacturalistBox.Name = "FacturalistBox";
-            this.FacturalistBox.Size = new System.Drawing.Size(323, 173);
+            this.FacturalistBox.Size = new System.Drawing.Size(296, 196);
             this.FacturalistBox.TabIndex = 10;
-            this.FacturalistBox.SelectedIndexChanged += new System.EventHandler(this.FacturalistBox_SelectedIndexChanged);
             // 
             // Calcularbutton
             // 
             this.Calcularbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calcularbutton.Location = new System.Drawing.Point(201, 122);
+            this.Calcularbutton.Location = new System.Drawing.Point(349, 152);
             this.Calcularbutton.Name = "Calcularbutton";
             this.Calcularbutton.Size = new System.Drawing.Size(125, 33);
             this.Calcularbutton.TabIndex = 11;
@@ -162,11 +164,23 @@ namespace Examen1Parcial
             this.Cantidad2textBox.Size = new System.Drawing.Size(60, 20);
             this.Cantidad2textBox.TabIndex = 13;
             // 
+            // Cerrarbutton
+            // 
+            this.Cerrarbutton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Cerrarbutton.Location = new System.Drawing.Point(349, 216);
+            this.Cerrarbutton.Name = "Cerrarbutton";
+            this.Cerrarbutton.Size = new System.Drawing.Size(75, 23);
+            this.Cerrarbutton.TabIndex = 14;
+            this.Cerrarbutton.Text = "CERRAR";
+            this.Cerrarbutton.UseVisualStyleBackColor = false;
+            this.Cerrarbutton.Click += new System.EventHandler(this.Cerrarbutton_Click);
+            // 
             // Formulario2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 380);
+            this.ClientSize = new System.Drawing.Size(572, 424);
+            this.Controls.Add(this.Cerrarbutton);
             this.Controls.Add(this.Cantidad2textBox);
             this.Controls.Add(this.CantidadP2label);
             this.Controls.Add(this.Calcularbutton);
@@ -204,5 +218,6 @@ namespace Examen1Parcial
         private System.Windows.Forms.Button Calcularbutton;
         private System.Windows.Forms.Label CantidadP2label;
         private System.Windows.Forms.TextBox Cantidad2textBox;
+        private System.Windows.Forms.Button Cerrarbutton;
     }
 }

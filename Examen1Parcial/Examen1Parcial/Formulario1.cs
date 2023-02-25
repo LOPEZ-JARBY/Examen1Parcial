@@ -30,22 +30,29 @@ namespace Examen1Parcial
             {
                 interes = capital * tasa * t;
                 MontoTotal = interes + capital;
-                ValoreslistBox.Items.Add(Meses[i]+ " |"+ interes+"    |"+ MontoTotal);
 
+                interes = Math.Round(interes, 2);
+                MontoTotal = Math.Round(MontoTotal,2);
+                //ListBox
+                MeseslistBox.Items.Add(Meses[i]);
+                IntereslistBox.Items.Add(interes);
+                MontolistBox.Items.Add(MontoTotal);
                 capital = MontoTotal;
+                acum = acum + interes;
             }
 
-           // Mostrar();
+            this.TinterestextBox.Text = Convert.ToString(acum);
 
         }
-        private void Mostrar()
+
+        private void Cerrarbutton_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i <= periodos; i++)
-            {
-                ValoreslistBox.Items.Add(" MES " + interes + MontoTotal);
-            }
+            this.Close();
         }
 
-       
+        private void TinterestextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

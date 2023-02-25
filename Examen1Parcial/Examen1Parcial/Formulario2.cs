@@ -16,8 +16,9 @@ namespace Examen1Parcial
         {
             InitializeComponent();
         }
-        decimal TotalPagar; decimal desc; decimal subtotal; String Producto1; String Producto2;
-        decimal PrecioP1; decimal PrecioP2;
+
+        decimal TotalPagar; String Producto1; String Producto2; decimal desc;
+        decimal PrecioP1; decimal PrecioP2; decimal ISV; decimal SubTotal; decimal subtotal;
         private void PrecioP2label_Click(object sender, EventArgs e)
         {
 
@@ -25,27 +26,35 @@ namespace Examen1Parcial
 
         private async void Calcularbutton_Click(object sender, EventArgs e)
         {
-            
 
             //Ingresar nombre de los productos
-            String Producto1 = Convert.ToString(Producto1textBox);
-            String Producto2 = Convert.ToString(Producto2textBox);
+            String Producto1 = Convert.ToString(Producto1textBox.Text);
+            String Producto2 = Convert.ToString(Producto2textBox.Text);
 
             //Ingresar precio de los productos
-            decimal PrecioP1 = Convert.ToDecimal(PrecioP1textBox);//Verificar
-            decimal PrecioP2 = Convert.ToDecimal(PrecioP2textBox);
+            decimal PrecioP1 = Convert.ToDecimal(PrecioP1textBox.Text);
+            decimal PrecioP2 = Convert.ToDecimal(PrecioP2textBox.Text);
 
             //Ingresar la cantidad de cada producto
-            int CantidadP1 = Convert.ToInt32(Cantidad1textBox);
-            int CantidadP2 = Convert.ToInt32(Cantidad1textBox);
+            int CantidadP1 = Convert.ToInt32(Cantidad1textBox.Text);
+            int CantidadP2 = Convert.ToInt32(Cantidad1textBox.Text);
 
             // Decimal TotalPagar = await CalculoAsync(PrecioP1,PrecioP2,CantidadP1,CantidadP2);
 
-            decimal Resultado = await CalculoAsync(PrecioP1, PrecioP2, CantidadP1, CantidadP2,subtotal,desc);
+            decimal Resultado = await CalculoAsync(PrecioP1, PrecioP2, CantidadP1, CantidadP2, SubTotal, ISV);
 
+            FacturalistBox.Items.Add(".................... FACTURA ...........");
+            FacturalistBox.Items.Add(".................................");
+            FacturalistBox.Items.Add("Producto1 :....................."+Producto1);
+            FacturalistBox.Items.Add("Producto2 :....................."+Producto2);
+            FacturalistBox.Items.Add("Precio unitario :..............."+PrecioP1);
+            FacturalistBox.Items.Add("Precio unitario :..............."+PrecioP2);
+            FacturalistBox.Items.Add("Sub Total :....................."+ (Resultado = await CalculoAsync(PrecioP1, PrecioP2, CantidadP1, CantidadP2, SubTotal, ISV)));
+            FacturalistBox.Items.Add("ISV :..........................."+ (Resultado = await CalculoAsync(PrecioP1, PrecioP2, CantidadP1, CantidadP2, SubTotal, ISV)));
+            FacturalistBox.Items.Add("Total a pagar:.................."+(Resultado = await CalculoAsync(PrecioP1, PrecioP2, CantidadP1, CantidadP2, SubTotal, ISV)));     
         }
         
-        private async Task <decimal> CalculoAsync(decimal P1, decimal P2, int C1, int C2, decimal SubTotal,decimal ISV)
+        private async Task <decimal> CalculoAsync(decimal P1, decimal P2, int C1, int C2,decimal ISV,decimal SubTotal)
         {
 
             decimal TotalPagar = await Task.Run(()=>
@@ -53,23 +62,15 @@ namespace Examen1Parcial
             {
                 SubTotal = (P1 * C1) + (P2 * C2);
                 ISV = SubTotal * (15/100);
-                return SubTotal - ISV;
+                return TotalPagar = SubTotal + ISV;
             });
 
             return TotalPagar;
-        } 
+        }
 
-        private void FacturalistBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void Cerrarbutton_Click(object sender, EventArgs e)
         {
-            FacturalistBox.Items.Add("Producto :....................."+Producto1);
-            FacturalistBox.Items.Add("Producto :....................."+Producto2);
-            FacturalistBox.Items.Add("Precio unitario :.............."+PrecioP1);
-            FacturalistBox.Items.Add("Precio unitario :.............."+PrecioP1);
-            FacturalistBox.Items.Add("Total Productos :.............."+Producto1+ Producto2);
-            FacturalistBox.Items.Add("Sub Total :...................."+subtotal);
-            FacturalistBox.Items.Add("ISV :.........................."+desc);
-            FacturalistBox.Items.Add("Total a pagar:................."+ TotalPagar);
-
+            this.Close();
         }
     }
 }

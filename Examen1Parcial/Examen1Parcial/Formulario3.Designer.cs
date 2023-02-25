@@ -35,6 +35,7 @@ namespace Examen1Parcial
             this.ResultadotextBox = new System.Windows.Forms.TextBox();
             this.Generarbutton = new System.Windows.Forms.Button();
             this.Numerolabel = new System.Windows.Forms.Label();
+            this.Cerrarbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -88,11 +89,23 @@ namespace Examen1Parcial
             this.Numerolabel.Size = new System.Drawing.Size(0, 16);
             this.Numerolabel.TabIndex = 5;
             // 
+            // Cerrarbutton
+            // 
+            this.Cerrarbutton.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.Cerrarbutton.Location = new System.Drawing.Point(146, 168);
+            this.Cerrarbutton.Name = "Cerrarbutton";
+            this.Cerrarbutton.Size = new System.Drawing.Size(75, 23);
+            this.Cerrarbutton.TabIndex = 6;
+            this.Cerrarbutton.Text = "CERRAR";
+            this.Cerrarbutton.UseVisualStyleBackColor = false;
+            this.Cerrarbutton.Click += new System.EventHandler(this.Cerrarbutton_Click);
+            // 
             // Formulario3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 238);
+            this.Controls.Add(this.Cerrarbutton);
             this.Controls.Add(this.Numerolabel);
             this.Controls.Add(this.Generarbutton);
             this.Controls.Add(this.ResultadotextBox);
@@ -114,5 +127,6 @@ namespace Examen1Parcial
         private System.Windows.Forms.TextBox ResultadotextBox;
         private System.Windows.Forms.Button Generarbutton;
         private System.Windows.Forms.Label Numerolabel;
+        private System.Windows.Forms.Button Cerrarbutton;
     }
 }

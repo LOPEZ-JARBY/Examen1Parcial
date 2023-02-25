@@ -48,5 +48,9 @@ namespace Examen1Parcial
             return num;
         }
 
+        private void Cerrarbutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

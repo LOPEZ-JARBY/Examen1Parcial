@@ -32,11 +32,12 @@ namespace Examen1Parcial
             this.Formulario1button = new System.Windows.Forms.Button();
             this.Formulario2button = new System.Windows.Forms.Button();
             this.Formulario3button = new System.Windows.Forms.Button();
+            this.Cerrarbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Formulario1button
             // 
-            this.Formulario1button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Formulario1button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Formulario1button.Location = new System.Drawing.Point(27, 56);
             this.Formulario1button.Name = "Formulario1button";
             this.Formulario1button.Size = new System.Drawing.Size(88, 23);
@@ -47,7 +48,7 @@ namespace Examen1Parcial
             // 
             // Formulario2button
             // 
-            this.Formulario2button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Formulario2button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Formulario2button.Location = new System.Drawing.Point(138, 56);
             this.Formulario2button.Name = "Formulario2button";
             this.Formulario2button.Size = new System.Drawing.Size(91, 23);
@@ -58,7 +59,7 @@ namespace Examen1Parcial
             // 
             // Formulario3button
             // 
-            this.Formulario3button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Formulario3button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Formulario3button.Location = new System.Drawing.Point(254, 56);
             this.Formulario3button.Name = "Formulario3button";
             this.Formulario3button.Size = new System.Drawing.Size(88, 23);
@@ -67,11 +68,24 @@ namespace Examen1Parcial
             this.Formulario3button.UseVisualStyleBackColor = true;
             this.Formulario3button.Click += new System.EventHandler(this.Formulario3button_Click);
             // 
+            // Cerrarbutton
+            // 
+            this.Cerrarbutton.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Cerrarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cerrarbutton.Location = new System.Drawing.Point(138, 111);
+            this.Cerrarbutton.Name = "Cerrarbutton";
+            this.Cerrarbutton.Size = new System.Drawing.Size(75, 23);
+            this.Cerrarbutton.TabIndex = 3;
+            this.Cerrarbutton.Text = "CERRAR";
+            this.Cerrarbutton.UseVisualStyleBackColor = false;
+            this.Cerrarbutton.Click += new System.EventHandler(this.Cerrarbutton_Click);
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 128);
+            this.ClientSize = new System.Drawing.Size(354, 160);
+            this.Controls.Add(this.Cerrarbutton);
             this.Controls.Add(this.Formulario3button);
             this.Controls.Add(this.Formulario2button);
             this.Controls.Add(this.Formulario1button);
@@ -86,6 +100,7 @@ namespace Examen1Parcial
         private System.Windows.Forms.Button Formulario1button;
         private System.Windows.Forms.Button Formulario2button;
         private System.Windows.Forms.Button Formulario3button;
+        private System.Windows.Forms.Button Cerrarbutton;
     }
 }
 

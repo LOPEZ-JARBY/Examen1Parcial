@@ -39,5 +39,10 @@ namespace Examen1Parcial
             Form formulario = new Formulario3();
             formulario.Show();
         }
+
+        private void Cerrarbutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
