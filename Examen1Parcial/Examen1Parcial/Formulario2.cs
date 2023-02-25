@@ -50,11 +50,11 @@ namespace Examen1Parcial
             FacturalistBox.Items.Add("Precio unitario :..............."+PrecioP1);
             FacturalistBox.Items.Add("Precio unitario :..............."+PrecioP2);
             FacturalistBox.Items.Add("Sub Total :....................."+ (Resultado = await CalculoAsync(PrecioP1, PrecioP2, CantidadP1, CantidadP2, SubTotal, ISV)));
-            FacturalistBox.Items.Add("ISV :..........................."+ (Resultado = await CalculoAsync(PrecioP1, PrecioP2, CantidadP1, CantidadP2, SubTotal, ISV)));
+            FacturalistBox.Items.Add("Descuento :....................."+ (Resultado = await CalculoAsync(PrecioP1, PrecioP2, CantidadP1, CantidadP2, SubTotal, ISV)));
             FacturalistBox.Items.Add("Total a pagar:.................."+(Resultado = await CalculoAsync(PrecioP1, PrecioP2, CantidadP1, CantidadP2, SubTotal, ISV)));     
         }
         
-        private async Task <decimal> CalculoAsync(decimal P1, decimal P2, int C1, int C2,decimal ISV,decimal SubTotal)
+        private async Task <decimal> CalculoAsync(decimal P1, decimal P2, int C1, int C2,decimal desc,decimal SubTotal)
         {
 
             decimal TotalPagar = await Task.Run(()=>
@@ -62,7 +62,7 @@ namespace Examen1Parcial
             {
                 SubTotal = (P1 * C1) + (P2 * C2);
                 ISV = SubTotal * (15/100);
-                return TotalPagar = SubTotal + ISV;
+                return TotalPagar = SubTotal - desc;
             });
 
             return TotalPagar;
